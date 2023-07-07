@@ -1,0 +1,30 @@
+{
+  "name": "marketing-generator",
+  "version": "1.0.0",
+  "description": "Marketing Image Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchmalone/marketing-generator.git"
+  },
+  "keywords": [
+    "marketing",
+    "graphics",
+    "social",
+    "media",
+    "share"
+  ],
+  "author": "Mitch Malone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitchmalone/marketing-generator/issues"
+  },
+  "homepage": "https://github.com/mitchmalone/marketing-generator#readme",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "rimraf": "^5.0.1"
+  }
+}
