@@ -1,11 +1,11 @@
-const fs = require('fs');
-const { registerFont } = require('canvas');
+import fs from "fs";
+import { registerFont } from "canvas";
 
-module.exports.getLines = (content) => content.split(/\r?\n/);
+const getLines = (content) => content.split(/\r?\n/);
 
-module.exports.wrapText = (ctx, text, x, y, maxTextWidth, lineHeight) => {
-  const words = text.split(' ');
-  let line = '';
+const wrapText = (ctx, text, x, y, maxTextWidth, lineHeight) => {
+  const words = text.split(" ");
+  let line = "";
 
   for (let n = 0; n < words.length; n += 1) {
     const testLine = `${line + words[n]} `;
@@ -23,7 +23,7 @@ module.exports.wrapText = (ctx, text, x, y, maxTextWidth, lineHeight) => {
   ctx.fillText(line, x, y);
 };
 
-module.exports.registerFonts = (path) => {
+const registerFonts = (path) => {
   fs.readdir(path, function (err, files) {
     if (err) {
       console.error("Could not list the directory.", err);
@@ -31,8 +31,19 @@ module.exports.registerFonts = (path) => {
     }
 
     files.forEach(function (file) {
-      const fontName = file.split('.')[0];
+      const fontName = file.split(".")[0];
       registerFont(`${path}/${file}`, { family: fontName });
     });
   });
-}
+};
+
+const slugify = (str) => {
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+};
+
+export { getLines, wrapText, registerFonts, slugify };
