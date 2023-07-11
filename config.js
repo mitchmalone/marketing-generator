@@ -19,8 +19,8 @@ const config = {
           xPos: 0,
           yPos: 0,
         },
-        overlay: {
-          image: "./overlay.png",
+        overlay:  {
+          image: './overlay-igfeed.png',
           width: 1080,
           height: 1400,
           xPos: 0,
@@ -75,8 +75,8 @@ const config = {
           xPos: 0,
           yPos: 0,
         },
-        overlay: {
-          image: "./overlay2.png",
+        overlay:  {
+          image: './overlay-igstory.png',
           width: 2160,
           height: 2800,
           xPos: 1040,
@@ -117,6 +117,63 @@ const config = {
           lineHeight: 72,
         },
       ],
+    },
+    {
+      name: 'Linked In Share',
+      suffix: `-lishare`,
+      width: 1920,
+      height: 1080,
+      bgColor: '#ff0000',
+      layers: {
+        background: {
+          image: './background.png',
+          width: 1920,
+          height: 1080,
+          xPos: 0,
+          yPos: 0,
+        },
+        overlay:  {
+          image: './overlay-lifeed.png',
+          width: 800,
+          height: 1030,
+          xPos: 50,
+          yPos: 1077,
+        },
+      },
+      text: [
+        {
+          text: "NEW BLOG POST",
+          color: '#023047',
+          font: 'regular 36px rubik-medium',
+          pos: 460,
+          maxWidth: 680,
+          lineHeight: 36,
+        },
+        {
+          text: "European cities embracing remote work with digital nomad villages",
+          color: '#023047',
+          font: 'regular 52px montserrat',
+          pos: 520,
+          maxWidth: 680,
+          lineHeight: 52,
+        },
+        {
+          text: "Paris France",
+          color: '#023047',
+          font: 'regular 36px rubik-semibold',
+          pos: 880,
+          maxWidth: 680,
+          lineHeight: 36,
+        },
+        {
+          text: "48°53'18\" N 2°20'12\" E",
+          color: '#023047',
+          font: 'regular 26px rubik-light',
+          pos: 940,
+          maxWidth: 680,
+          lineHeight: 26,
+        },
+      ]
     },
   ],
 };
